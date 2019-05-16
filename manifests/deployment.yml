@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: weaversenpaipipelinesdotnetcoredocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: weaversenpaipipelinesdotnetcoredocker 
+    spec:
+      containers:
+        - name: weaversenpaipipelinesdotnetcoredocker 
+          image: phcdocker01.azurecr.io/weaversenpaipipelinesdotnetcoredocker 
+          ports:
+          - containerPort: 8000
